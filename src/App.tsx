@@ -5,13 +5,13 @@ import Agence from "./pages/Agence";
 
 const App = () => {
   return (
-    <div className="text-2xl">
+    <main className="text-2xl overflow-x-hidden">
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/projects" element={<Projects />} />
         <Route path="/agence" element={<Agence />} />
       </Routes>
-    </div>
+    </main>
   );
 };
 
