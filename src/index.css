@@ -9,3 +9,28 @@
   font-family: lausanne-500;
   src: url("/public/fonts/Lausanne-500.woff2");
 }
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.marquee-track {
+  display: flex;
+  width: max-content;
+  animation: marquee 15s linear infinite;
+}
+
+.nav-overlay {
+  clip-path: inset(0 0 100% 0);
+  transition: clip-path 0.55s cubic-bezier(0.76, 0, 0.24, 1);
+  will-change: clip-path;
+}
+
+.nav-overlay.is-visible {
+  clip-path: inset(0 0 0% 0);
+}
