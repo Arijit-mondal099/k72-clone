@@ -3,7 +3,7 @@ import gsap from "gsap";
 import { useRef, type ReactNode } from "react";
 import { useLocation } from "react-router-dom";
 
-const Stair = ({ children }: { children: ReactNode }) => {
+const Stair = ({ children }: { children?: ReactNode }) => {
   const stairContainerRaf = useRef<HTMLDivElement | null>(null);
   const childrenRef = useRef<HTMLDivElement | null>(null);
   const { pathname } = useLocation();
